@@ -3,22 +3,27 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\productosController;
 use App\Http\Controllers\api\categoriasController;
-
+use App\Http\Controllers\api\proveedoresController;
 
 
 //Rutas para productos
 Route::get('/productos', [productosController::class, 'index']);
-route::get('/productos/{id}', [productosController::class, 'show']);
-route::post('/productos', [productosController::class, 'store']);
-route::put('/productos/{id}', [productosController::class, 'update']);
-route::delete('/productos/{id}', [productosController::class, 'destroy']);
+Route::get('/productos/{id}', [productosController::class, 'show']);
+Route::post('/productos', [productosController::class, 'store']);
+Route::put('/productos/{id}', [productosController::class, 'update']);
+Route::delete('/productos/{id}', [productosController::class, 'destroy']);
 
 
 //Rutas para categorias
 Route::get('/categorias', [categoriasController::class, 'index']);
-route::get('/categorias/{id}', [categoriasController::class, 'show']);
-route::post('/categorias', [categoriasController::class, 'store']);
-route::put('/categorias/{id}', [categoriasController::class, 'update']);
-route::delete('/categorias/{id}', [categoriasController::class, 'destroy']);
+Route::get('/categorias/{id}', [categoriasController::class, 'show']);
+Route::post('/categorias', [categoriasController::class, 'store']);
+Route::put('/categorias/{id}', [categoriasController::class, 'update']);
+Route::delete('/categorias/{id}', [categoriasController::class, 'destroy']);
 
 //Rutas para proveedores
+Route::get('/Proveedores', [proveedoresController::class, 'index']);
+Route::get('/Proveedores/{id}', [proveedoresController::class, 'show']);
+Route::post('/Proveedores', [proveedoresController::class, 'store']);
+Route::put('/Proveedores/{id}', [proveedoresController::class, 'update']);
+Route::delete('/Proveedores/{id}', [proveedoresController::class, 'destroy']);
